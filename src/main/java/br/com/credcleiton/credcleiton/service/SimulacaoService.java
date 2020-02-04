@@ -6,6 +6,8 @@ import br.com.credcleiton.credcleiton.repository.SimulacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+
 @Service
 public class SimulacaoService {
     @Autowired
@@ -13,5 +15,10 @@ public class SimulacaoService {
 
     public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) {
        return simulacaoRepository.findByTipoEmprestimo(dadosSimulacao.getTipoEmprestimo());
+    }
+
+    public double calcularJuros(DadosSimulacao dadosSimulacao){
+        Banco banco = new Banco();
+        return banco.getTaxa()*dadosSimulacao.getValorEmprestimo();
     }
 }

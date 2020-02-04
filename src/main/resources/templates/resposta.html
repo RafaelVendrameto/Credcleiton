@@ -8,10 +8,12 @@
 </head>
 <body>
 
-<div th:each="banco: ${bancos}">
+    <div th:each="banco: ${bancos}">
+        <p><span th:text="${banco.nome}"></span></p>
+    </div>
 
-    <p><span th:text="${banco.nome}"></span></p>
-
-</div>
+    <div th:each="lista: ${listas}">
+        <p><span th:text="${lista.}"></span></p>
+    </div>
 </body>
 </html>	

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class SimulacaoController {
     @Autowired
@@ -26,6 +29,15 @@ public class SimulacaoController {
     public String listarBancos(@ModelAttribute DadosSimulacao dadosSimulacao, Model model){
         Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
         model.addAttribute("bancos", banco);
+        return "resposta";
+    }
+
+    @PostMapping
+    public String simulador(@ModelAttribute DadosSimulacao dadosSimulacao, Model model){
+        List<String> lista = new ArrayList<>();
+        lista.add(String.valueOf(simulacaoService.calcularJuros(dadosSimulacao)));
+
+        model.addAttribute("listas", lista);
         return "resposta";
     }
 }
