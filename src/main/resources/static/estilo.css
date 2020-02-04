@@ -1,0 +1,11 @@
+form {
+    margin: auto;
+    text-align: left;
+    line-height: 25px;
+    width: 25%;
+    border: 0.1px solid black;
+    padding: 100px;
+    background-color: rgb(168, 231, 210);
+}
+
+
