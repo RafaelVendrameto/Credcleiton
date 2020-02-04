@@ -3,7 +3,7 @@ package br.com.credcleiton.credcleiton.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Banco")
+@Table(name = "banco")
     public class Banco{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,6 +14,8 @@ import javax.persistence.*;
         private String tipoEmprestimo;
         @Column
         private double taxa;
+        @Column
+        private String imagem;
 
         public long getId() {
             return id;
@@ -47,9 +49,13 @@ import javax.persistence.*;
             this.taxa = taxa;
         }
 
-
-
-
+        public String getImagem() {
+        return imagem;
     }
+
+        public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+}
 
 
