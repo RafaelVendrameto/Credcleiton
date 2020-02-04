@@ -12,9 +12,6 @@ public class SimulacaoService {
     private SimulacaoRepository simulacaoRepository;
 
     public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) {
-
-        Iterable<Banco> bancos = simulacaoRepository.findAll();
-
-        return bancos;
+       return simulacaoRepository.findByTipoEmprestimo(dadosSimulacao.getTipoEmprestimo());
     }
 }
