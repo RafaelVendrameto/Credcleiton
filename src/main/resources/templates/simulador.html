@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador</title>
+    <link rel="stylesheet" href="estilo.css">
+
 </head>
 <body>
+
+<form action="">
+
+    <div class="simulador">
+
+        <h1>Simulador</h1><br>
+        <div>
+            <label>Tipo de emprestimo </label>
+            <select name="tipoEmprestimo">
+                <option value="--">--</option>
+                <option value="imobiliario">Imobiliario</option>
+                <option value="veiculo">veículo</option>
+                <option value="pessoal">Pessoal</option>
+            </select>
+
+        </div><br>
+
+        <div>
+            <label>Parcelas </label>
+            <select name="parcelas">
+                <option value="--">--</option>
+                <option value="12">12X</option>
+                <option value="24">24X</option>
+                <option value="36">36X</option>
+                <option value="48">48X</option>
+                <option value="60">60X</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label>Valor do emprestimo </label>
+            <input type="number" value="number">
+        </div><br>
+
+        <div>
+            <input type="submit" value="Simular">
+        </div>
+    </div>
+</form>
 
 </body>
 </html>
