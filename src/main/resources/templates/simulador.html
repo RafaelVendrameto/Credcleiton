@@ -1,30 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CredKlayton</title>
-    <link rel="stylesheet" href="estilo.css">
-
+    <title>CredKlayton - Simulador</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="font-size: 11px;">
+<div class="header">
+    <a href="/"><img th:src="@{images/logo.png}" alt="logo"></a>
+    <h1>
+        <a href="index.html">CredKlayton</a>
+    </h1>
+</div>
 
-<form action="/resposta" method="post">
-
-    <div class="simulador">
-
-        <h1>Simulador</h1><br>
-        <div>
+<div class="hero-image">
+    <form class="hero-form" style="letter-spacing: 0.011em;font-weight: ;height: 400px;width: 500px;">
+        <h1>Faça sua simulação:</h1>
+        <div class="campo">
             <label>Tipo de emprestimo </label>
             <select name="tipoEmprestimo">
                 <option value="--">--</option>
                 <option value="imovel">Imobiliario</option>
                 <option value="veiculo">Veículo</option>
                 <option value="pessoal">Pessoal</option>
-            </select>
-
-        </div><br>
+            </select><br>
 
         <div>
             <label>Parcelas </label>
@@ -35,19 +35,29 @@
                 <option value="36">36X</option>
                 <option value="48">48X</option>
                 <option value="60">60X</option>
-            </select>
-        </div><br>
+            </select><br>
 
         <div>
             <label>Valor do emprestimo </label>
-            <input type="number" name="valorEmprestimo">
-        </div><br>
-
-        <div>
-            <input type="submit" value="Simular">
+            <button type="button" name="simulacao" value="simulacao" class="css3button" style="font-size: 19px;line-height: 1.2;letter-spacing: 0.123em;">Simular</button>
         </div>
+
+
+
+
+    <div class="rodape" style=" text-align: center;">
+        <p class="em-wider" style="font-size: 10px;">Parceiros: <br></p>
+        <p>
+            <img src="https://furieriveiculos.com.br/wp-content/uploads/2018/06/logo-specto-case-santander-01-2.png" style="width: 30px;padding-left: 0px;padding-right: 100px;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///9BQUEAxf8nJyc+Pj4wMDAsLCw5OTno6Og0NDTOzs47Ozs1NTUpKSkAwf9wcHCRkZFFRUVRUVEjIyOxsbGJiYm9vb1MTEzl9v982f9Sz//x8fGrq6sAAABnZ2fa2tr29vbDw8N3d3d/f3+amprc3NyNjY3R0dGjo6NbW1uvr68SEhIaGhpiYmIAvf+W4P+KDnH/AAAJOElEQVR4nO2baXejNhRATdGCDNQLNm5rTwzenUna///vKgES2sBkEh87c979NAEsdEHvaWNGIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnp+//v1T5+9H1+fr+evPP3TA8BsCht8fMPz+gOH3Bwy/P2D4/TENf8uR9z8G/z26PgAAAADwPGzzw3I3meynm/H60XX5eqLNe4gZpTGHJjhFp/Gjq/SljF/CBAU6iGJ6KR5dr69ivCJx4CEJD4+u2pewfkmRz69yxPntAn6EDfNpZJ/7yQ//OOpHlm9h+FNFwIn/hfXTxeY99ZRU7pIwQ/tfipw89b4/CZncLCFsW/bbq3lqwfhhutQPTSk/FEqBAw3QTDv7mrK4Kinba0e3Aa6OxuTqPMObLNM+P1E/dKtQYSgSlGgJb8b7Gq2q1hEWtiGKC6/hjrT3nal8vshUI0PZ+YOCE3ZDkBeabm8axjvOnJdFp/qZc11htrENg/jqM1xicb+EVe8Rz5ujZVYZM1b9MvvYW3xJbgqKQvsVuWFa/WOTBPGLfmbHa8qrhQLHMEj2ruFYtAa22pT5JEWhbNuFeExxcijLk0gYaPURwd0gQS7Q+9yEYSH+sSZBrIftmj/85MLfLNYyRGMY4ItjOOcCpE7f5/YnB15JWj+4tWj1Q5Kf+i0eJsjDZpDhEXMhvXwug8WL1L2FIRKtMCstw2NqZ6UKitr3VvAam82kl3M2UJDfuC+jckNWjsfjnD9hXGgnRFweRmOi5c7KEF13MqHqhiLxGkmpIkpF8fKvC/9hONiQdnaDLqSnaVTRgzFmKGD6ZTmuLXgc0nboIAznVZJFtDAMD9UZmzEvJVVp9YxvxYzGdGAQNopFr6EkLdvjV1S3KJ6AgrZXF4ar0VoESDw3DMWZd7+hujkPhIAMNIz8bRTFyPtqzW7AMeTjkDAVtc7U4xZhhaveizfT9uXWhqOtuH2yv2iGF/4kmFP6lpeKVS+be1uynz31aBBynbwEKfNIZp0TKpVpShxoqWYfi37yNJ3uZ4HW/BpDPpYSb1GckobibeFyZJPp+Ye3C2MM1MPafYWUHOpnVeRX4pxNOkfhyrBKm7vmaFE13pjyCVnVfOVrkIajaZPJ2xoL56R5kG1OnsRt47/UyWsQFycKUz1Rl4kzWk1uG4rIk1l3Y94gluNMZTiaUMvwwOuP2IKXdZ6TlXwk2yoKptw82ptx0M/KboihmS2Lua2Iuwb2srcoRR+g4lWEMyaYMYaJaBEyelrDpg5aq6tSAEtZinljzOS72idVA+PFVIM5vcftIbIH3KETAPYz6Mw1qreo+vFmhCdikpyjcZ7n5bHgd0s2jmGVUHXDiGj3zNQ85ao1B7wbDWNhjbgTt/pr6yF0RrjeWxDZ1F9ifQS5pGpwqhnWCVUvN5rJJEf1R76TM9g4607pFkszk3qHZXaohh0B8JNJCJPPPeIHs4W65PjG2Ftd5VPKsBqJ5xn/FdUL2yAiGna6NG42voa8veNsYk7O+pibTTB59V1kJVTcMTXbLBrydg5yfl0sNkV7Df/ztTYc83+26vlC/6vimC9y907rcrEYF87hbqwW6H89ezPZsA8M6h9OYRp2zLlyM1iTgVnsKYjMBhjvvVdtzdnV0K72KbAMPbMy31WD89gTMOwdHvFvY4iu3qvK3ycOO6bNU7PTZAvvVc+JbcjcSQvHGpl2DUx/pDYhu568JYpF8OaaH94OKm1OvzkR8Z7VZ34OW/e2DT2rB/UqhE7X6kEYuCCK02nhXtuOFv2zsUCOREJbZBL3P+cbht4lutgaendNn3yGApq6hc5Qf3HKMCDWO/6soecFTaxFgI6E220oZnXWpWftvp7pvG4YW9nv04aIWYp7e73fH6u9hnJ9V7HTQtubwFvDgJmP59OGATLa1PrdWQPoXKbsMQzMjRRz6ST1TBQ0QysUP2/If3uVbymahs4iRse4RzekDfqLMiaVB3qrRN3QDMWvMAwQJpPp5bCcpZ51uLBzlVIazk7Lml2MVUWNaLMavmdZ0DA0QvFLDEWhNKF2Dq1PdK/rN4Z6j7O9ymek7zKUVvfD3FmpYWiE4lcZdtKzbecxrFYxmh+2x65N9VFzzrMuYhrqoXhvQ9Yzc/IaFvIOWE38j6m8cNlZW8tQC8U7G/auM3sNR9KiXRmQa0PJ67G5vdv0bcM2FO9s2J1mOg3lirAarxcyI/EEI1cqnXJtwzYU72uYdXX2HzF8bTKpGBvJ4amzbKAMlalcVbyrYehdibthKIcvaigkh6TVhw9ynQhbZUkzpDKVDMV7Gmb9gn5DtZ5MmpHLmOiXnZqYtNfvpCFZq/XOeH5nQ9TfRLsMr2oa1ByYGJmnzasdhlGkhkrsdFfDJLi54+oxLAPZyGS6VENSYj4B62Od1rDeYKwfUnk/Q5R1jkYdw2D20jAPmTNqk0NSuZwlp9fWnEwzrPec6r/Wnzb0f7MQk+uQfQLVnOIafZtcdaRySKr6BzmCMwenumG7+yVC8XOGaM6wPZlASfgyrLAhsyf1ytQwVb5UcwXPMDRC8XOG9DQqdyFOaP34UUxxuLoM/aijxxDL/lqGXVs/uYNpbnsZhnoonnefM6yibfu6fJ+RNKXz3aH8wIfe3YZqO1OmzoCNo6rkItrKNmjMr0xDLRTRu/OMPm74q3QZtvvU2nYl5o8wDNOUqCmk8RWXZahtRMt/PI8hJXPVERR9oWoMTm3DyPnlIw2R2gtmOGVLbYVm0/v5lb4fYhtqofh4Q7Qq84bybGapjt5IQnoMtVB8vKFv3bxifOMrT21DxDW0vwl5SsOJs3Bnom1BewytUHxGQ1VFihltRjyI97kMywZIVMx6DK1QfEZDNSQ9HfPD/n1FCUlm1910sZXfs6iP4byG5keGz2ioRqDOIEn1IupbNa+hEYpPaCi/6PB8Hau+Z1GDU7+hHopPaDj3jc4atrIecqvNb6iH4vMZbmXlqO+sPTjtMNRC8fkMnYZoIBfd5FZbl2G7tTrUUP1/s4q3rs3PQTRlZch3ci3v5N+3r/5zW3W6HsSm8k/bMJIXDtzHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg0fwPVrSPGnEDojQAAAAASUVORK5CYII=" style="width: 30px;padding-right: 100px;">
+            <img src="https://seeklogo.com/images/B/BV_financeira-logo-660FB7B5DC-seeklogo.com.png" style="width: 30px;padding-right: 100px;">
+            <img src="https://yt3.ggpht.com/a/AGF-l79OMVSfPLG6wKbmySVicqc6YpELy6O5mz24yA=s900-c-k-c0xffffffff-no-rj-mo" style="width: 30px;padding-right: 100px;">
+            <img src="https://logodownload.org/wp-content/uploads/2014/05/itau-logo-1.png" style="width: 30px;padding-right: 100px;">
+            <img src="https://www.ambienteenergia.com.br/wp-content/uploads/2018/10/caixa-logo-x.png" style="width: 30px;padding-right: 100px;">
+            <img src="https://seeklogo.net/wp-content/uploads/2015/10/banco-bradesco-logo-vector-download.jpg" style="width: 30px;padding-right: 100px;">
+            <img src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-68C92EDFE8-seeklogo.com.png" style="width: 30px;padding-right: 100px;">
+        </p>
     </div>
-</form>
+
 
 </body>
-</html>
