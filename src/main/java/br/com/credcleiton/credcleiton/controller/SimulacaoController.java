@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SimulacaoController {
@@ -23,17 +24,17 @@ public class SimulacaoController {
             return "index";
         }
 
-
         @GetMapping("/simulacao")
         public String simulador() {
             return "simulador";
         }
 
-        @PostMapping("/resposta")
-        public String listarBancos(@ModelAttribute DadosSimulacao dadosSimulacao, Model model) {
+        @PostMapping("/resultado")
+        public ModelAndView listarBancos(DadosSimulacao dadosSimulacao, Model model) {
+            ModelAndView pagina = new ModelAndView("resultado");
             Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
-            model.addAttribute("bancos", banco);
-            return "resposta";
+            pagina.addObject("bancos", banco);
+            return pagina;
 
         }
     }
