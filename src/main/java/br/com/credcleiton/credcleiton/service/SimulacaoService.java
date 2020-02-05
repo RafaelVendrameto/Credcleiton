@@ -18,10 +18,11 @@ public class SimulacaoService {
     public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) {
         Iterable<Banco> listaBancos = simulacaoRepository.findByTipoEmprestimo(dadosSimulacao.getTipoEmprestimo());
         List<Banco> listaVazia = new ArrayList<>();
+
         for(Banco lista : listaBancos){
             lista.setJuros(lista.getTaxa()*dadosSimulacao.getValorEmprestimo());
             lista.setTotalEmprestimo(lista.getJuros()+dadosSimulacao.getValorEmprestimo());
-            lista.setTotalParcela(lista.getTotalEmprestimo()-dadosSimulacao.getParcelas());
+            lista.setTotalParcela(lista.getTotalEmprestimo()/dadosSimulacao.getParcelas());
             listaVazia.add(lista);
         }
        return listaVazia;
