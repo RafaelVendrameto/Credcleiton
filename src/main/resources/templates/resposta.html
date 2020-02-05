@@ -10,10 +10,10 @@
 
     <div th:each="banco: ${bancos}">
         <p><span th:text="${banco.nome}"></span></p>
+        <p><span th:text="${banco.juros}"></span></p>
+        <p><span th:text="${banco.totalEmprestimo}"></span></p>
+        <p><span th:text="${banco.totalParcela}"></span></p>
     </div>
 
-    <div th:each="lista: ${listas}">
-        <p><span th:text="${lista.}"></span></p>
-    </div>
 </body>
 </html>	
