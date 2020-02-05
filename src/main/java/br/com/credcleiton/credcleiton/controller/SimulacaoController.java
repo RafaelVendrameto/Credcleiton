@@ -1,4 +1,4 @@
-package br.com.credcleiton.credcleiton.Controller;
+package br.com.credcleiton.credcleiton.controller;
 
 import br.com.credcleiton.credcleiton.model.Banco;
 import br.com.credcleiton.credcleiton.model.DadosSimulacao;
@@ -9,11 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class SimulacaoController {
@@ -29,15 +24,6 @@ public class SimulacaoController {
     public String listarBancos(@ModelAttribute DadosSimulacao dadosSimulacao, Model model){
         Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
         model.addAttribute("bancos", banco);
-        return "resposta";
-    }
-
-    @PostMapping
-    public String simulador(@ModelAttribute DadosSimulacao dadosSimulacao, Model model){
-        List<String> lista = new ArrayList<>();
-        lista.add(String.valueOf(simulacaoService.calcularJuros(dadosSimulacao)));
-
-        model.addAttribute("listas", lista);
         return "resposta";
     }
 }
