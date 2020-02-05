@@ -10,9 +10,10 @@
 
     <div th:each="banco: ${bancos}">
         <p><span th:text="${banco.nome}"></span></p>
-        <p><span th:text="${banco.juros}"></span></p>
-        <p><span th:text="${banco.totalEmprestimo}"></span></p>
-        <p><span th:text="${banco.totalParcela}"></span></p>
+        <img th:src="${banco.imagem}" width="10%">
+        <p>Juros: <span th:text="${banco.juros}"></span></p>
+        <p>Total do Emprestimo: <span th:text="${banco.totalEmprestimo}"></span></p>
+        <p>Total de cada parcela: <span th:text="${banco.totalParcela}"></span></p>
     </div>
 
     <div>
