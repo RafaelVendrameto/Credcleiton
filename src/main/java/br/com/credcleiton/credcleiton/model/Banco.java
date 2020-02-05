@@ -16,6 +16,9 @@ import javax.persistence.*;
         private double taxa;
         @Column
         private String imagem;
+        private double juros = 0;
+        private double totalEmprestimo = 0;
+        private double totalParcela = 0;
 
         public long getId() {
             return id;
@@ -55,6 +58,30 @@ import javax.persistence.*;
 
         public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+        public double getJuros() {
+            return juros;
+        }
+
+        public void setJuros(double juros) {
+            this.juros = juros;
+        }
+
+        public double getTotalEmprestimo() {
+            return totalEmprestimo;
+        }
+
+        public void setTotalEmprestimo(double totalEmprestimo) {
+            this.totalEmprestimo = totalEmprestimo;
+        }
+
+        public double getTotalParcela() {
+            return totalParcela;
+        }
+
+        public void setTotalParcela(double totalParcela) {
+        this.totalParcela = totalParcela;
     }
 }
 
