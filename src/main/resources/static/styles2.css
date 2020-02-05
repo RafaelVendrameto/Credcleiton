@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+form{
+    width: 75%;
+    margin: auto;
+}
+
+input{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.menu a{
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.header{
+    background-color: #336ca6;
+    overflow: auto;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.header img {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+
+.header h1 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  position: center;
+  top: 18px;
+  left: 10px;
+}
+
+body, html {
+    height: 100%;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.xerpa.com.br/blog/wp-content/uploads/sites/2/2017/06/tendencias-mercado-financeiro-brasileiro.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+
+}
+
+.campo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: space-between;
+  width: 90%
+}
+
+button.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #FFFFF0;
+	padding: 10px 40px;
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#336ca6),
+		to(#336ca6));
+	background: linear-gradient(
+		top,
+		#336ca6 0%,
+		#336ca6);
+	border-radius: 10px;
+	border: 0px solid #a7bfd6;
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.footer {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.rodape{
+font-size: 20px;
+}
