@@ -24,7 +24,7 @@ public class SimulacaoController {
         }
 
 
-        @GetMapping
+        @GetMapping("/simulacao")
         public String simulador() {
             return "simulador";
         }
