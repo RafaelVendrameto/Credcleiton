@@ -16,6 +16,9 @@ import javax.persistence.*;
         private double taxa;
         @Column
         private String imagem;
+        @Column
+        private String link;
+
         private double juros = 0;
         private double totalEmprestimo = 0;
         private double totalParcela = 0;
