@@ -3,7 +3,6 @@ package br.com.credcleiton.credcleiton.controller;
 import br.com.credcleiton.credcleiton.model.Banco;
 import br.com.credcleiton.credcleiton.model.DadosSimulacao;
 import br.com.credcleiton.credcleiton.service.SimulacaoService;
-import br.com.credcleiton.credcleiton.service.listsrBancosExeptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,16 +30,12 @@ public class SimulacaoController {
 
         @PostMapping("/resultado")
         public Object listarBancos(DadosSimulacao dadosSimulacao, Model model) {
-            try {
-                ModelAndView pagina = new ModelAndView("resultado");
-                Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
-                pagina.addObject("bancos", banco);
+            ModelAndView pagina = new ModelAndView("resultado");
+            Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
 
-                return pagina;
-            } catch (listsrBancosExeptions e) {
-                return "erro";
+            pagina.addObject("bancos", banco);
 
-            }
+            return pagina;
         }
     }
 }
