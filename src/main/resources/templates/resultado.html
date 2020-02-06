@@ -9,7 +9,7 @@
 <body>
 
 <div th:each="banco: ${bancos}">
-    alguma coisa
+
     <p><span th:text="${banco.nome}"></span></p>
     <img th:src="${banco.imagem}" width="10%">
     <p>Juros: R$ <span th:text="${banco.juros}"></span></p>
