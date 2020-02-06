@@ -23,15 +23,15 @@ import javax.persistence.*;
         private double totalEmprestimo = 0;
         private double totalParcela = 0;
 
-    public String getLinkBanco() {
+        public String getLinkBanco() {
         return linkBanco;
     }
 
-    public void setLinkBanco(String linkBanco) {
+        public void setLinkBanco(String linkBanco) {
         this.linkBanco = linkBanco;
     }
 
-    public long getId() {
+        public long getId() {
             return id;
         }
 
