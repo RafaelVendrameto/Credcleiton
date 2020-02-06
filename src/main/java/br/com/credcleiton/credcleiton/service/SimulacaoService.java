@@ -16,6 +16,7 @@ public class SimulacaoService {
     @Autowired
     private SimulacaoRepository simulacaoRepository;
 
+
     public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) {
         Iterable<Banco> listaBancos = simulacaoRepository.findByTipoEmprestimo(dadosSimulacao.getTipoEmprestimo());
         List<Banco> listaVazia = new ArrayList<>();
