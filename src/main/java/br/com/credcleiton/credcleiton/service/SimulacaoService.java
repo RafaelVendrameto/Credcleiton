@@ -11,7 +11,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Service
 public class SimulacaoService {
     @Autowired
@@ -24,13 +23,10 @@ public class SimulacaoService {
         for(Banco lista : listaBancos){
             DecimalFormat format = new DecimalFormat();
             lista.setJuros(lista.getTaxa()*dadosSimulacao.getValorEmprestimo());
-            lista.setTotalEmprestimo(lista.getJuros()+dadosSimulacao.getValorEmprestimo());
+            lista.setTotalEmprestimo((lista.getJuros()*dadosSimulacao.getParcelas())+dadosSimulacao.getValorEmprestimo());
             lista.setTotalParcela(lista.getTotalEmprestimo()/dadosSimulacao.getParcelas());
             listaVazia.add(lista);
         }
        return listaVazia;
     }
-
-
-
 }

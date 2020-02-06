@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,12 +29,13 @@ public class SimulacaoController {
         }
 
         @PostMapping("/resultado")
-        public ModelAndView listarBancos(DadosSimulacao dadosSimulacao, Model model) {
+        public Object listarBancos(DadosSimulacao dadosSimulacao, Model model) {
             ModelAndView pagina = new ModelAndView("resultado");
             Iterable<Banco> banco = simulacaoService.listarBancos(dadosSimulacao);
-            pagina.addObject("bancos", banco);
-            return pagina;
 
+            pagina.addObject("bancos", banco);
+
+            return pagina;
         }
     }
 }

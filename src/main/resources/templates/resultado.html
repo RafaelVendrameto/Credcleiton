@@ -9,6 +9,10 @@
 <body>
 
 <div th:each="banco: ${bancos}">
+<<<<<<< HEAD
+=======
+
+>>>>>>> b82e3d268380691202deb74dca45c675e39fdc9f
     <p><span th:text="${banco.nome}"></span></p>
     <img th:src="${banco.imagem}" width="10%">
     <p>Juros: R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}"></span></p>

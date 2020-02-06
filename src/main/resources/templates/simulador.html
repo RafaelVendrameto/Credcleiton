@@ -19,16 +19,16 @@
         <h1>Faça sua simulação:</h1>
         <div class="campo">
             <label style="font-size: 22px;">Tipo de empréstimo: </label>
-            <select name="tipoEmprestimo">
-                <option value="--">--</option>
+            <select name="tipoEmprestimo" required>
+                <option value="">--</option>
                 <option value="imovel">Imóvel</option>
                 <option value="veiculo">Veículo</option>
                 <option value="pessoal">Pessoal</option>
             </select>
 
             <label style="font-size: 22px;">Parcelas: </label>
-            <select name="parcelas">
-                <option value="--">--</option>
+            <select name="parcelas" required>
+                <option value="">--</option>
                 <option value="12">12x</option>
                 <option value="24">24x</option>
                 <option value="36">36x</option>
@@ -37,7 +37,7 @@
             </select>
 
             <label style="font-size: 22px;">Valor: </label>
-            <input type="number" name="valorEmprestimo" min="1000" max="500000">
+            <input type="number" name="valorEmprestimo" min="1000" max="500000" required>
 
         </div>
         <a href="/resultado"><button class="css3button" style="font-size: 19px;line-height: 1.2;letter-spacing: 0.123em;">Enviar</button></a>
