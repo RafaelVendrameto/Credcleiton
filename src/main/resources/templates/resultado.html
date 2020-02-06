@@ -8,24 +8,24 @@
 </head>
 <body>
 
+    <div th:each="banco: ${bancos}">
+        <div th:each="dadosSimulacao: ${dados}">
+
+            <p><span th:text="${banco.nome}"></span></p>
+            <img th:src="${banco.imagem}" width="10%">
+            <p>Tipo de emprestimo: <span th:text="${dadosSimulacao.tipoEmprestimo}"></span></p>
+            <p>Quantidade de parcelas: <span th:text="${dadosSimulacao.parcelas}"></span>X</p>
+            <p>Valor do emprestimo: R$ <span th:text="${#numbers.formatDecimal(dadosSimulacao.valorEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
+            <p>Juros: R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}"></span></p>
+            <p>Total do Emprestimo: R$ <span th:text="${#numbers.formatDecimal(banco.totalEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
+            <p>Total de cada parcela: R$ <span th:text="${#numbers.formatDecimal(banco.totalParcela, 0, 'COMMA', 2, 'POINT')}"></span></p>
+            <p><span th:text="${banco.totalParcela}"></span></p>
+
+        </div>
 
 
-<div th:each="banco: ${bancos}">
-    <div th:each="dadosSimulacao: ${dados}">
-
-    <p><span th:text="${banco.nome}"></span></p>
-    <img th:src="${banco.imagem}" width="10%">
-    <p>Tipo de emprestimo: <span th:text="${dadosSimulacao.tipoEmprestimo}"></span></p>
-    <p>Quantidade de parcelas: <span th:text="${dadosSimulacao.parcelas}"></span>X</p>
-    <p>Valor do emprestimo: <span th:text="${dadosSimulacao.valorEmprestimo}"></span></p>
-    <p>Juros: R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}"></span></p>
-    <p>Total do Emprestimo: R$ <span th:text="${#numbers.formatDecimal(banco.totalEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
-    <p>Total de cada parcela: R$ <span th:text="${#numbers.formatDecimal(banco.totalParcela, 0, 'COMMA', 2, 'POINT')}"></span></p>
+        <a href="/simulacao"><button>Voltar</button></a>
     </div>
 
-
-<div>
-    <a href="/simulacao"><button>Voltar</button></a>
-</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    font-size: 11px;
 }
 
 a{
@@ -8,17 +9,18 @@ a{
     text-decoration: none;
 }
 
-form{
-    width: 75%;
-    margin: auto;
-}
 
-input{
+.container
+
+
+.container input{
     display: flex;
     justify-content: space-between;
+    align-self: baseline;
+    align-items: baseline;
     overflow: auto;
     width: 75%;
-    padding: 10px;
+    padding: px;
     margin: 5px 0;
 }
 
@@ -28,12 +30,12 @@ input{
 }
 
 .header{
-    background-color: #336ca6;
-    overflow: auto;
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    padding: 0 10px;
+   background-color: black;
+   overflow: auto;
+   color: white;
+   display: flex;
+   justify-content: flex-start;
+   padding: 0 10px;
 }
 
 .header img {
@@ -50,40 +52,76 @@ input{
 }
 
 body, html {
-    height: 100%;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.xerpa.com.br/blog/wp-content/uploads/sites/2/2017/06/tendencias-mercado-financeiro-brasileiro.png");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
-.hero-form {
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: flex-start;
-  position: absolute;
+  letter-spacing: 1;
+  label-size: 20px
+  justify-content: space-evenly;
+  position: fixed;
+  max-width: 100%;
+  padding: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
 
 }
 
+
+.hero-image {
+  display: flex;
+  flex-direction: row;
+  background-image: url("https://i.pinimg.com/originals/a9/43/18/a94318f0c124e9ad91ed247efa39ce9b.gif");
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+  text-align: center;
+}
+
+.hero-form{
+  display: flex;
+  flex-direction: row;
+  align-content: baseline;
+  justify-content: space-evenly;
+  position: fixed;
+  align-items: space-evenly;
+  text-align: space-evenly;
+}
+
+
 .campo{
+  display: flex;
+  font-size: 20px
+  flex-direction: row;
+  align-self: auto;
+  align-content: baseline;
+  justify-content: space-between;
+  text-align: space-between;
+  width: 100%
+  font-size: 30px;
+  align-items: baseline;
+}
+
+.container h1{
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 32px;
+  position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: space-between;
-  width: 90%
+  text-align: center;
+}
+
+.container label{
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 18px;
 }
 
 button.css3button {
@@ -110,18 +148,30 @@ button.css3button {
 }
 
 .footer {
-  font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: white;
-  align-items: center;
-  padding: 0 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .rodape{
-font-size: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+.rodape rodape2 {
+    font-size: 10px;
+}
+
+.rodape img{
+    width: 30px;
+    padding-left: 0px;
+    padding-right: 100px;
 }
