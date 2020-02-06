@@ -10,14 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 @Service
 public class SimulacaoService {
     @Autowired
     private SimulacaoRepository simulacaoRepository;
 
-    public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) {
+    public Iterable<Banco> listarBancos(DadosSimulacao dadosSimulacao) throws listsrBancosExeptions {
         Iterable<Banco> listaBancos = simulacaoRepository.findByTipoEmprestimo(dadosSimulacao.getTipoEmprestimo());
         List<Banco> listaVazia = new ArrayList<>();
+
+        if (listaBancos == listaVazia){
+            throw new listsrBancosExeptions("Erro. preencha as informações obrigatorias!");
+        }
 
         for(Banco lista : listaBancos){
             lista.setJuros(lista.getTaxa()*dadosSimulacao.getValorEmprestimo());
@@ -26,8 +31,8 @@ public class SimulacaoService {
             listaVazia.add(lista);
         }
        return listaVazia;
+
+
+
     }
-
-
-
 }

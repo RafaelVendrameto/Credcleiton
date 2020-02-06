@@ -6,4 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface SimulacaoRepository extends CrudRepository<Banco, String> {
     Iterable<Banco> findByTipoEmprestimo(String nome);
+
+
 }
