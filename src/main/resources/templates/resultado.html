@@ -9,12 +9,11 @@
 <body>
 
 <div th:each="banco: ${bancos}">
-    alguma coisa
     <p><span th:text="${banco.nome}"></span></p>
     <img th:src="${banco.imagem}" width="10%">
-    <p>Juros: R$ <span th:text="${banco.juros}"></span></p>
-    <p>Total do Emprestimo: R$ <span th:text="${banco.totalEmprestimo}"></span></p>
-    <p>Total de cada parcela: R$ <span th:text="${banco.totalParcela}"></span></p>
+    <p>Juros: R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}"></span></p>
+    <p>Total do Emprestimo: R$ <span th:text="${#numbers.formatDecimal(banco.totalEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
+    <p>Total de cada parcela: R$ <span th:text="${#numbers.formatDecimal(banco.totalParcela, 0, 'COMMA', 2, 'POINT')}"></span></p>
 </div>
 
 <div>

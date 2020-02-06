@@ -1,13 +1,11 @@
 package br.com.credcleiton.credcleiton;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import org.springframework.boot.SpringApplication;
+
 class CredcleitonApplicationTests {
-
-	@Test
-	void contextLoads() {
+	public static void main(String[] args) {
+		SpringApplication.run(CredcleitonApplication.class, args);
 	}
 
 }

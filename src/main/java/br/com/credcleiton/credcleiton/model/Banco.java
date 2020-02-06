@@ -20,7 +20,8 @@ import javax.persistence.*;
         private double totalEmprestimo = 0;
         private double totalParcela = 0;
 
-        public long getId() {
+
+    public long getId() {
             return id;
         }
 
