@@ -1,0 +1,334 @@
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+form{
+    width: 75%;
+    margin: auto;
+}
+
+input{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.menu a{
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+
+.header{
+    background-color: black;
+    overflow: auto;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.header img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.header h1 {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    position: center;
+    top: 18px;
+    left: 10px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://experiencialize.com.br/wp-content/uploads/2018/12/arte-da-negociacao.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+     font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.hero-image2 {
+  background-color: white;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text2 {
+
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.hero-text2 h1 {
+     font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+
+.rodape{
+font-size: 20px;
+}
+
+
+.texto2{
+
+
+
+    margin-top: 21px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+
+    margin-right: 15px;
+
+
+}
+.text{
+
+
+    padding-top: 0px;
+    border-bottom-width: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:0px;
+
+    height: 30px;
+    width: 200px;
+
+
+}
+
+
+
+.header2{
+
+
+        overflow: auto;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+
+
+}
+.cor{
+ background-color: #000000;
+}
+
+.bo{
+
+    margin-left: 50px;
+    padding-top: 0px;
+    height: 25px;
+    margin-top: 22px;
+
+}
+
+.u{
+background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+
+    width: 90px;
+    height: 18px;
+    margin-top: 22px;
+
+}
+
+.u2{
+background-color: #FFFFFF;
+    color: #000000;
+      padding-left: 18px;
+        width: 78px;
+        height: 35px;
+        margin-top: 11px;
+
+}
+========================================================================================
+aside {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+aside ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+aside ul li {
+  display: flex;
+  flex-direction: row;
+  background-color: #868a887a;
+}
+
+aside ul li img {
+  max-width: 27%;
+  border-radius: 5px 5px 0 0;
+}
+
+aside ul li footer {
+  flex: 1;
+  background: var(--card-color);
+  border: 1px solid var(--border);
+  padding: 15px 20px;
+  text-align: left;
+  border-radius: 0 0 5px 5px;
+}
+
+aside ul li footer strong {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+aside ul li footer span {
+  font-size: 13px;
+  color: var(--third-color);
+  margin-top: 5px;
+}
+
+aside ul li footer p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+aside ul li .buttons {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+aside ul li .buttons button {
+  height: 50px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 0;
+  border-radius: 4px;
+  background: var(--card-color);
+  cursor: pointer;
+}
+
+aside ul li .buttons button:hover img {
+  transform: translateY(-5px);
+  transition: all 0.2s;
+}
+
+aside .empty {
+  font-size: 32px;
+  color: #999;
+  font-weight: bold;
+  margin-top: 300px;
+}
+
+.match-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.match-container .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  margin: 30px 0;
+}
+
+.match-container strong {
+  font-size: 32px;
+  color: #FFF;
+}
+
+.match-container p {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.match-container button {
+  border: 0;
+  background: none;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+
+.footer {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.rodape{
+    font-size: 10px;
+    text-align: center;
+}
+
+.rodape rodape2 {
+    font-size: 10px;
+}
+
+.rodape img{
+    width: 30px;
+    padding-left: 0px;
+    padding-right: 100px;
+}
+
+
