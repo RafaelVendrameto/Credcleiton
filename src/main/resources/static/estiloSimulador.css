@@ -76,7 +76,7 @@ body, html {
 .hero-image {
   display: flex;
   flex-direction: row;
-  background-image: url("https://i.pinimg.com/originals/a9/43/18/a94318f0c124e9ad91ed247efa39ce9b.gif");
+  background-image: url("images/simulador.gif");
   height: 100%;
   background-position: center;
   background-repeat: repeat;

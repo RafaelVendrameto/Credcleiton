@@ -53,7 +53,7 @@ body, html {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://lh3.googleusercontent.com/proxy/TyTQEaq8QNQQeb3X6Ub0GMmTeupd7GpOH93BnRSQN7OMQHl3GASjBYRoK3otpRo0pdFisJz1p_f6Ot8N7gXp9zl7EewzupKzbx9uSxkFLdxO2iSpWLshvAQ0MbKVJFeL_Ygo1Q");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/home.gif");
     height: 100%;
     background-position: center;
     background-repeat: repeat;
