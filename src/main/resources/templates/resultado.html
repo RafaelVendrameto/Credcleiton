@@ -6,15 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CredKlayton</title>
     <link rel="stylesheet" href="estiloListar.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet">
 </head>
 <body class="cor">
 
-    <div class="header">
-        <a href="/"><img th:src="@{images/logo.png}" alt="logo"></a>
-        <h1>
-            <a href="/">CredKlayton</a>
-        </h1>
-    </div>
+<div class="header">
+    <a href="/"><img th:src="@{images/logo.png}" alt="logo"></a>
+    <h1>
+        <a href="/">CredKlayton</a>
+    </h1>
+</div>
+
+
 
     <div th:each="dadosSimulacao: ${dados}">
         <div class="header2">
@@ -25,17 +28,17 @@
 
             <p class="texto2"> Parcelas: </p>
             <div class="u">
-                <span th:text="${dadosSimulacao.parcelas}"></span>
+                <span class="u2" th:text="${dadosSimulacao.parcelas}"></span>
             </div>
 
 
             <p class="texto2">Valor:</p>
-            <div class="u2">
-                <p><span th:text="${#numbers.formatDecimal(dadosSimulacao.valorEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
+            <div>
+                <p class="u2"><span th:text="${#numbers.formatDecimal(dadosSimulacao.valorEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
             </div>
 
 
-            <button class="bo"> Voltar</button>
+            <button class="bo"> Alterar </button>
 
         </div>
 
@@ -45,9 +48,9 @@
                     <img th:src="${banco.imagem}"/>
                     <footer>
                         <strong th:text="${banco.nome}"></strong>
-                        <p>R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}">Juros</span></p>
-                        <p>R$ <span th:text="${#numbers.formatDecimal(banco.totalEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
-                        <p>R$ <span th:text="${#numbers.formatDecimal(banco.totalParcela, 0, 'COMMA', 2, 'POINT')}"></span></p>
+                        <p>Juros: R$ <span th:text="${#numbers.formatDecimal(banco.juros, 0, 'COMMA', 2, 'POINT')}">Juros</span></p>
+                        <p>Total emprestimo: R$ <span th:text="${#numbers.formatDecimal(banco.totalEmprestimo, 0, 'COMMA', 2, 'POINT')}"></span></p>
+                        <p>Parcela: R$ <span th:text="${#numbers.formatDecimal(banco.totalParcela, 0, 'COMMA', 2, 'POINT')}"></span></p>
                     </footer>
 
                     <div className="buttons">
@@ -58,6 +61,16 @@
         </aside>
         </ul>
     </div>
+
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> r </p>
 
     <div class="rodape">
         <p class="rodape2">Parceiros: <br></p>
